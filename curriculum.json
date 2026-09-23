@@ -1,0 +1,101 @@
+{
+  "subjects": {
+    "English": {
+      "strands": [
+        "Speaking and Listening",
+        "Reading",
+        "Writing"
+      ],
+      "source": "PNG DoE SBC curriculum \u2014 verify against current syllabus/teacher guide",
+      "grades": "1-8"
+    },
+    "Mathematics": {
+      "strands": [
+        "Number and Operation",
+        "Quantities and Measurement",
+        "Geometrical Figures",
+        "Data and Mathematical Relations"
+      ],
+      "source": "PNG DoE Primary SBC Mathematics \u2014 verify grade-specific document",
+      "grades": "1-8"
+    },
+    "Science": {
+      "strands": [
+        "Life Science",
+        "Physical Science",
+        "Earth and Space",
+        "Science Skills"
+      ],
+      "source": "PNG DoE Primary SBC Science \u2014 verify grade-specific document",
+      "grades": "3-8"
+    },
+    "Social Science": {
+      "strands": [
+        "History",
+        "Geography",
+        "People and Society",
+        "Citizenship"
+      ],
+      "source": "PNG DoE Primary SBC Social Science \u2014 verify grade-specific document",
+      "grades": "3-8"
+    },
+    "Health": {
+      "strands": [
+        "Personal Health",
+        "Nutrition",
+        "Safety",
+        "Community Health"
+      ],
+      "source": "PNG DoE Health curriculum \u2014 verify grade-specific document",
+      "grades": "1-8"
+    },
+    "Physical Education": {
+      "strands": [
+        "Movement Skills",
+        "Games and Sports",
+        "Fitness",
+        "Traditional Games"
+      ],
+      "source": "PNG DoE PE curriculum \u2014 verify grade-specific document",
+      "grades": "1-8"
+    },
+    "Arts": {
+      "strands": [
+        "Visual Arts",
+        "Music",
+        "Dance",
+        "Drama"
+      ],
+      "source": "PNG DoE Arts curriculum \u2014 verify grade-specific document",
+      "grades": "1-8"
+    },
+    "CCVE": {
+      "strands": [
+        "Identity",
+        "Relationships",
+        "Values",
+        "Decision Making"
+      ],
+      "source": "PNG DoE CCVE curriculum \u2014 verify grade-specific document",
+      "grades": "1-8"
+    },
+    "Making a Living": {
+      "strands": [
+        "Agriculture",
+        "Food Technology",
+        "Design and Materials",
+        "Enterprise"
+      ],
+      "source": "PNG DoE Making a Living curriculum \u2014 verify grade-specific document",
+      "grades": "3-8"
+    }
+  },
+  "planningStructure": [
+    "Yearly Plan",
+    "Termly Plan",
+    "Weekly Plan",
+    "Daily Lesson Plan",
+    "Assignment",
+    "Assessment"
+  ]
+}

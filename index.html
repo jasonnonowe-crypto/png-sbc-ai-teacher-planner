@@ -1,0 +1,39 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PNG SBC Teacher Planner</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header><div><h1>🇵🇬 PNG SBC AI Teacher Planner</h1><p>Standard Based Curriculum • Primary Grades 1–8 • PC Edition</p></div><div class="status" id="status">Local curriculum library ready</div></header>
+<div class="layout">
+<aside>
+<button class="nav on" data-screen="home">🏠 Dashboard</button>
+<button class="nav" data-screen="planner">🗓️ AI Planner</button>
+<button class="nav" data-screen="curriculum">📚 Curriculum Library</button>
+<button class="nav" data-screen="assignments">📝 Assignments</button>
+<button class="nav" data-screen="saved">💾 Saved Plans</button>
+<button class="nav" data-screen="settings">⚙️ Settings</button>
+</aside>
+<main>
+<section id="home" class="screen active"><div class="hero"><h2>PNG Grade 1–8 SBC Teacher Planning System</h2><p>Create Yearly, Termly, Weekly and Daily plans using a structured PNG SBC curriculum library. Connect the optional AI backend for intelligent lesson generation.</p><button class="primary" onclick="openPlanner('daily')">✨ Create Daily Lesson</button></div>
+<div class="cards"><div class="card"><b>🗓️ Yearly</b><span>Plan all four terms.</span></div><div class="card"><b>📋 Termly</b><span>Build week-by-week programs.</span></div><div class="card"><b>📆 Weekly</b><span>Monday–Friday planning.</span></div><div class="card"><b>✏️ Daily</b><span>Full SBC lesson structure.</span></div></div>
+<div class="notice">Curriculum standards must be verified against the current official PNG Department of Education documents before being treated as official. The application keeps source/verification information visible.</div></section>
+
+<section id="planner" class="screen"><div class="panel"><h2>AI Planner</h2>
+<div class="grid">
+<label>Plan Type<select id="planType"><option value="yearly">Yearly Plan</option><option value="termly">Termly Plan</option><option value="weekly">Weekly Plan</option><option value="daily" selected>Daily Lesson Plan</option></select></label>
+<label>Grade<select id="grade"></select></label><label>Subject<select id="subject"></select></label><label>Strand<select id="strand"></select></label>
+<label>Term<select id="term"><option>1</option><option>2</option><option>3</option><option>4</option></select></label><label>Week<select id="week"></select></label>
+<label>Year<input id="year" type="number" value="2026"></label><label>Lesson length (minutes)<input id="duration" type="number" value="40"></label>
+<label class="wide">Topic / Theme<input id="topic" placeholder="e.g. Adding fractions with whole numbers"></label>
+<label class="wide">Student English level<select id="language"><option>Very Simple English</option><option selected>Simple Grade-Level English</option><option>Standard Grade-Level English</option><option>Academic English</option></select></label>
+<label class="wide">Teacher instructions / class needs<textarea id="instructions" placeholder="Example: My pupils need extra practice. Use local PNG examples and group activities."></textarea></label>
+</div><button class="primary" onclick="generatePlan()">✨ Generate Plan</button><div id="output" class="output"></div>
+<div class="actions"><button onclick="saveCurrent()">💾 Save</button><button onclick="downloadCurrent()">⬇️ Download</button><button onclick="window.print()">🖨️ Print</button></div>
+</div></section>
+
+<section id="curriculum" class="screen"><div class="panel"><h2>📚 PNG SBC Curriculum Library</h2><p>Select a grade and subject. The library is structured for grade-specific curriculum data to be imported and verified from PNG DoE source documents.</p><div class="grid"><label>Grade<select id="libGrade"></select></label><label>Subject<select id="libSubject"></select></label></div><div id="libView" class="library"></div></div></section>
+
+<section id="assignments" class="screen"><div class="panel"><h2>📝 Assignment Generator</h2><div class="grid"><label>Grade<select id="aGrade"></select></label><label>Subject<select id="aSubject"></select></label><label>Topic<input id="aTopic" placeholder="Topic"></label><label>Marks<input id="aMarks" type="number" value="20"></label><label class="wide">Instructions<textarea id="aInstructions" placeholder="Use simple English, include local examples, and provide a marking guide."></textarea></label></div><button class="primary" onclick="generateAssignment()">✨ Generate Assignment</button><div id="assignmentOut" class="output"></div></div></section>
+
+<section id="saved" class="screen"><div class="panel"><h2>💾 Saved Plans</h2><div id="savedList"></div></div></section>
+
+<section id="settings" class="screen"><div class="panel"><h2>⚙️ Settings</h2><label>Teacher Name<input id="teacher" placeholder="Teacher name"></label><label>School<input id="school" placeholder="School name"></label><label>Province<input id="province" placeholder="Province"></label><label>District<input id="district" placeholder="District"></label><h3>AI connection</h3><p>The PC app is designed to call a secure server endpoint. Do not put an OpenAI API key in this desktop interface. Set your server URL below.</p><label>AI Server URL<input id="serverUrl" placeholder="https://your-secure-server.example/api/generate"></label><button class="primary" onclick="saveSettings()">Save Settings</button></div></section>
+</main></div>
+<script src="app.js"></script></body></html>
